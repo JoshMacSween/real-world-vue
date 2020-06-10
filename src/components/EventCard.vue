@@ -2,9 +2,11 @@
   <router-link :to="{ name: 'event-show', params: { id: 1 } }">
     <div class="event-card -shadow">
       <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
-      <h4 class="title">{{ title }}</h4>
-      <span>{{ event.atendees.length }} attending</span>
-    </div>Show Event #1
+      <h4 class="title">{{ event.title }}</h4>
+      <!-- <BaseIcon name="activity"> -->
+        <h4>{{ event.attendees.length }} attending</h4>
+      <!-- </BaseIcon> figure out icon package  -->
+    </div>
   </router-link>
 </template>
 
@@ -17,7 +19,7 @@ export default {
         title: 'Park Cleanup',
         date: 'Monday, June 8, 2020',
         time: '6:00',
-        atendees: [
+        attendees: [
           { id: 'abc123', name: 'Josh MacSween' },
           { id: 'cba321', name: 'Brandi Bailey' }
         ]
