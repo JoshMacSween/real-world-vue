@@ -2,13 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import VueFeatherIcon from 'vue-feather-icon'
-
-Vue.use(VueFeatherIcon)
-
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
-
 const requireComponent = require.context(
   './components',
   false,
